@@ -9,7 +9,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.Scanner;
-import java.util.SortedMap;
 
 public class Program {
     public static void main(String[] args) {
@@ -33,7 +32,7 @@ public class Program {
         double pricePerHour  = sc.nextDouble();
         System.out.print("Entre com o preço por dia: R$");
         double pricePerDay = sc.nextDouble();
-
+        //                                                                        \/      UPCASTING    \/
         RentalService rentalService = new RentalService(pricePerDay, pricePerHour, new BrazilTaxService());
 
         rentalService.processInvoice(cr);
